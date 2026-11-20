@@ -1,0 +1,6 @@
+k5_archetype,0: Gas 72%+Oil 9% (n=45),1: Hydro 74%+Gas 6% (n=45),2: Oil 89%+Solar 5% (n=51),3: Coal 60%+Gas 13% (n=21),4: Nuclear 21%+Gas 19% (n=27),5: Oil 41%+Hydro 25% (n=22)
+Coal-heavy,0,0,0,21,2,2
+Diversified,0,0,0,0,24,5
+Gas-dominated,45,0,0,0,1,0
+Hydro-dominated,0,45,0,0,0,5
+Oil-dependent,0,0,51,0,0,10

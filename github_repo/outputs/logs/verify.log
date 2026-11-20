@@ -1,0 +1,48 @@
+PASS  world generation change 2000-2024 (%): recomputed 102.439 | pipeline 102.439
+PASS  world carbon-intensity change (%): recomputed -10.6551 | pipeline -10.6551
+PASS  world power-emissions change (%): recomputed 80.867 | pipeline 80.867
+PASS  2023 snapshot n: recomputed 211 | pipeline 211
+PASS  n with income group: recomputed 202 | pipeline 202
+PASS  n with GDP per capita: recomputed 163 | pipeline 163
+PASS  archetype size: Oil-dependent: recomputed 61 | pipeline 61
+PASS  archetype size: Hydro-dominated: recomputed 50 | pipeline 50
+PASS  archetype size: Gas-dominated: recomputed 46 | pipeline 46
+PASS  archetype size: Diversified: recomputed 29 | pipeline 29
+PASS  archetype size: Coal-heavy: recomputed 25 | pipeline 25
+PASS  share of world generation: Coal-heavy (%): recomputed 50.5984 | pipeline 50.5984
+PASS  share of world generation: Diversified (%): recomputed 25.5585 | pipeline 25.5585
+PASS  share of world generation: Gas-dominated (%): recomputed 15.3937 | pipeline 15.3937
+PASS  share of world generation: Hydro-dominated (%): recomputed 8.02576 | pipeline 8.02576
+PASS  share of world generation: Oil-dependent (%): recomputed 0.42356 | pipeline 0.42356
+PASS  KW archetype ~ carbon_intensity_elec: H: recomputed 142.863 | pipeline 142.863
+PASS  KW archetype ~ carbon_intensity_elec: eta2: recomputed 0.674093 | pipeline 0.674093
+PASS  KW archetype ~ electricity_generation: H: recomputed 106.434 | pipeline 106.434
+PASS  KW archetype ~ electricity_generation: eta2: recomputed 0.497253 | pipeline 0.497253
+PASS  KW archetype ~ population: H: recomputed 62.7153 | pipeline 62.7153
+PASS  KW archetype ~ population: eta2: recomputed 0.285026 | pipeline 0.285026
+PASS  KW archetype ~ per_capita_electricity: H: recomputed 19.8736 | pipeline 19.8736
+PASS  KW archetype ~ per_capita_electricity: eta2: recomputed 0.0770562 | pipeline 0.0770562
+PASS  KW archetype ~ net_elec_imports_share_demand: H: recomputed 1.35058 | pipeline 1.35058
+PASS  KW archetype ~ net_elec_imports_share_demand: eta2: recomputed -0.0128613 | pipeline -0.0128613
+PASS  KW archetype ~ GDP per capita: H: recomputed 38.1431 | pipeline 38.1431
+PASS  number of tests in the BH family: recomputed 8 | pipeline 8
+PASS  BH q (m = 8): carbon_intensity_elec: recomputed 5.50419e-29 | pipeline 5.50419e-29
+PASS  BH q (m = 8): electricity_generation: recomputed 1.67623e-21 | pipeline 1.67623e-21
+PASS  BH q (m = 8): population: recomputed 2.0773e-12 | pipeline 2.0773e-12
+PASS  BH q (m = 8): gdp_pc_latest: recomputed 2.09387e-07 | pipeline 2.09387e-07
+PASS  BH q (m = 8): per_capita_electricity: recomputed 0.000604492 | pipeline 0.000604492
+PASS  BH q (m = 8): net_elec_imports_share_demand: recomputed 0.852738 | pipeline 0.852738
+PASS  BH q (m = 8): income_group: recomputed 6.66633e-05 | pipeline 6.66633e-05
+PASS  BH q (m = 8): continent: recomputed 6.66633e-05 | pipeline 6.66633e-05
+PASS  RQ3 KW income ~ carbon intensity: H: recomputed 6.49749 | pipeline 6.49749
+PASS  RQ3 KW income ~ carbon intensity: p: recomputed 0.0897616 | pipeline 0.0897616
+PASS  RQ3 eta2: recomputed 0.0176641 | pipeline 0.0176641
+PASS  RQ3 KW income ~ kWh per person: H: recomputed 144.613 | pipeline 144.613
+PASS  RQ3 Spearman GDP ~ carbon intensity: recomputed -0.0104189 | pipeline -0.0104189
+PASS  RQ3 Spearman GDP ~ kWh per person: recomputed 0.912822 | pipeline 0.912822
+PASS  systems in both 2000 and 2023: recomputed 208 | pipeline 208
+PASS  systems in the same archetype: recomputed 149 | pipeline 149
+PASS  Italy carbon intensity 2000: recomputed 501.67 | pipeline 501.67
+PASS  Italy carbon intensity 2024: recomputed 281.4 | pipeline 281.4
+
+46 of 46 checks passed

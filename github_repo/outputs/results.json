@@ -1,0 +1,474 @@
+{
+ "rq1": {
+  "gen_2000": 15278.78,
+  "gen_2024": 30930.23,
+  "gen_chg_pct": 102.43913453822881,
+  "ci_2000": 527.26,
+  "ci_2024": 471.08,
+  "ci_chg_pct": -10.65508477790843,
+  "em_2000": 8055.91,
+  "em_2024": 14570.48,
+  "em_chg_pct": 80.86696599142742,
+  "ci_peak_year": 2007,
+  "ci_peak": 554.66,
+  "shares_2000": {
+   "Coal": 38.02,
+   "Gas": 17.97,
+   "Oil": 8.67,
+   "Nuclear": 16.63,
+   "Hydro": 17.21,
+   "Wind": 0.2,
+   "Solar": 0.01,
+   "Bioenergy": 1.01,
+   "Other renewables": 0.29
+  },
+  "shares_2024": {
+   "Coal": 34.07,
+   "Gas": 22.25,
+   "Oil": 2.76,
+   "Nuclear": 8.98,
+   "Hydro": 14.33,
+   "Wind": 8.11,
+   "Solar": 6.93,
+   "Bioenergy": 2.27,
+   "Other renewables": 0.29
+  },
+  "lowcarbon_2000": 35.344,
+  "lowcarbon_2024": 40.914,
+  "em_peak_year": 2024
+ },
+ "pca": {
+  "var_ratio": [
+   0.4609,
+   0.3016,
+   0.1388,
+   0.049,
+   0.0242,
+   0.0112,
+   0.0084,
+   0.0059,
+   0.0
+  ],
+  "std_var_ratio": [
+   0.1861,
+   0.1718,
+   0.1535,
+   0.1212,
+   0.109,
+   0.0994,
+   0.0915,
+   0.0675,
+   0.0
+  ]
+ },
+ "order": [
+  "Hydro-dominated",
+  "Diversified",
+  "Gas-dominated",
+  "Oil-dependent",
+  "Coal-heavy"
+ ],
+ "cluster": {
+  "k": 5,
+  "silhouette": 0.4847425910445371,
+  "sizes": {
+   "Oil-dependent": 61,
+   "Hydro-dominated": 50,
+   "Gas-dominated": 46,
+   "Diversified": 29,
+   "Coal-heavy": 25
+  },
+  "ari_ward": 0.8476117681373209,
+  "ari_hellinger": 0.8420732006445997,
+  "ari_zscore": 0.8343056432285876,
+  "ari_k4": 0.8578302483225674,
+  "ari_k6": 0.8269601617249469,
+  "neg_sil_n": 4,
+  "sil_by_cluster": {
+   "Coal-heavy": 0.4,
+   "Diversified": 0.166,
+   "Gas-dominated": 0.499,
+   "Hydro-dominated": 0.467,
+   "Oil-dependent": 0.675
+  },
+  "k4": {
+   "sil": 0.48366240142894495,
+   "ari": 0.9285364175704681,
+   "ari_p05": 0.8802318877067747
+  },
+  "k5": {
+   "sil": 0.4847425910445371,
+   "ari": 0.9174152068126818,
+   "ari_p05": 0.8370051821373817
+  },
+  "k6": {
+   "sil": 0.45231490538267716,
+   "ari": 0.8250708578198769,
+   "ari_p05": 0.7025332561895375
+  }
+ },
+ "second_method": {
+  "ward_ari": 0.8476117681373209,
+  "ward_sizes": [
+   25,
+   25,
+   48,
+   49,
+   64
+  ],
+  "average_linkage_ari": 0.8079706188523019,
+  "complete_linkage_ari": 0.7661849792894158,
+  "gmm_tied_ari": 0.9315649863917406,
+  "gmm_full_ari": 0.4082631665883653,
+  "gmm_spec": "GaussianMixture(k=5, n_init=20, reg_covar=1e-3, seed 0) fitted on PC1-PC4"
+ },
+ "k_sensitivity": {
+  "k4": {
+   "sizes": [
+    49,
+    50,
+    52,
+    60
+   ],
+   "ari_vs_k5": 0.8578302483225674,
+   "silhouette": 0.48366240142894495,
+   "top2_sources_per_cluster": {
+    "0": "Coal 32%+Hydro 14%",
+    "1": "Gas 70%+Oil 8%",
+    "2": "Hydro 71%+Oil 7%",
+    "3": "Oil 84%+Solar 6%"
+   }
+  },
+  "k6": {
+   "sizes": [
+    21,
+    22,
+    27,
+    45,
+    45,
+    51
+   ],
+   "ari_vs_k5": 0.8269601617249469,
+   "silhouette": 0.45231490538267716,
+   "top2_sources_per_cluster": {
+    "0": "Gas 72%+Oil 9%",
+    "1": "Hydro 74%+Gas 6%",
+    "2": "Oil 89%+Solar 5%",
+    "3": "Coal 60%+Gas 13%",
+    "4": "Nuclear 21%+Gas 19%",
+    "5": "Oil 41%+Hydro 25%"
+   }
+  }
+ },
+ "umap": {
+  "ref": "n_neighbors=15, min_dist=0.1, metric=euclidean, init=PCA(2), seed=0",
+  "trust_ref": 0.9777723906376893,
+  "trust_pca2": 0.9339401946643071,
+  "trust_min": 0.9752657543544927,
+  "trust_max": 0.9801941794644914,
+  "jacc_seed_mean": 0.7817520365225529,
+  "jacc_all_min": 0.6613400054151012
+ },
+ "external_tests": {
+  "m": 8,
+  "method": "Benjamini-Hochberg across the 8 external variables",
+  "q": {
+   "carbon_intensity_elec": 5.504187195541616e-29,
+   "electricity_generation": 1.6762297041755086e-21,
+   "population": 2.0773014388345477e-12,
+   "gdp_pc_latest": 2.0938716184477991e-07,
+   "per_capita_electricity": 0.0006044922296236722,
+   "net_elec_imports_share_demand": 0.8527377087353918,
+   "income_group": 6.666333349999167e-05,
+   "continent": 6.666333349999167e-05
+  },
+  "p": {
+   "carbon_intensity_elec": 6.88023399442702e-30,
+   "electricity_generation": 4.1905742604387715e-22,
+   "population": 7.789880395629554e-13,
+   "gdp_pc_latest": 1.0469358092238996e-07,
+   "per_capita_electricity": 0.0005289307009207131,
+   "net_elec_imports_share_demand": 0.8527377087353918,
+   "income_group": 4.999750012499375e-05,
+   "continent": 4.999750012499375e-05
+  },
+  "effect": {
+   "carbon_intensity_elec": 0.6740926407288356,
+   "electricity_generation": 0.49725271183992953,
+   "population": 0.28502553952751924,
+   "gdp_pc_latest": 0.21609532209458057,
+   "per_capita_electricity": 0.07705616518698322,
+   "net_elec_imports_share_demand": -0.012861272827998664,
+   "income_group": 0.2907624306037756,
+   "continent": 0.3722172555977007
+  }
+ },
+ "tree": {
+  "text": "|--- Oil <= 47.3\n|   |--- Gas <= 43.5\n|   |   |--- Hydro <= 39.4\n|   |   |   |--- Coal <= 30.3\n|   |   |   |   |--- class: Diversified\n|   |   |   |--- Coal >  30.3\n|   |   |   |   |--- class: Coal-heavy\n|   |   |--- Hydro >  39.4\n|   |   |   |--- class: Hydro-dominated\n|   |--- Gas >  43.5\n|   |   |--- class: Gas-dominated\n|--- Oil >  47.3\n|   |--- class: Oil-dependent\n",
+  "holdout_bal_acc": 0.9533333333333334,
+  "n_train": 147,
+  "n_test": 64,
+  "n_leaves": 5,
+  "chain": [
+   {
+    "feature": "Oil",
+    "threshold": 47.29750061035156,
+    "leaf": "Oil-dependent",
+    "n_train": 43
+   },
+   {
+    "feature": "Gas",
+    "threshold": 43.51049995422363,
+    "leaf": "Gas-dominated",
+    "n_train": 32
+   },
+   {
+    "feature": "Hydro",
+    "threshold": 39.40299987792969,
+    "leaf": "Hydro-dominated",
+    "n_train": 35
+   },
+   {
+    "feature": "Coal",
+    "threshold": 30.34950065612793,
+    "leaf": "Coal-heavy",
+    "n_train": 18
+   }
+  ],
+  "else_leaf": "Diversified",
+  "else_n_train": 19
+ },
+ "rf_holdout_bal_acc": 0.9505555555555556,
+ "logit_holdout_bal_acc": 0.9616666666666667,
+ "context_model": {
+  "n": 202,
+  "features": [
+   "income_rank",
+   "log_kwh_pc",
+   "log_pop",
+   "Africa",
+   "Asia",
+   "Europe",
+   "North America",
+   "Oceania",
+   "South America"
+  ],
+  "baseline": {
+   "bal_acc": 0.19999999999999996,
+   "sd": 5.551115123125783e-17,
+   "acc": 0.2673170731707317
+  },
+  "rf_context": {
+   "bal_acc": 0.4679151515151514,
+   "sd": 0.06676738874309429,
+   "acc": 0.48998780487804877
+  }
+ },
+ "rq3": {
+  "kw_H": 6.497488606051382,
+  "kw_p": 0.08976159979047016,
+  "n": 202,
+  "eta2_H": 0.017664083868946374,
+  "medians": {
+   "Low income": 350.365,
+   "Lower middle income": 500.0,
+   "Upper middle income": 566.44,
+   "High income": 436.62
+  },
+  "iqr": {
+   "Low income": [
+    120.5325,
+    593.2950000000001
+   ],
+   "Lower middle income": [
+    382.57,
+    603.06
+   ],
+   "Upper middle income": [
+    305.3375,
+    644.5174999999999
+   ],
+   "High income": [
+    172.025,
+    611.11
+   ]
+  },
+  "ns": {
+   "Low income": 28,
+   "Lower middle income": 51,
+   "Upper middle income": 52,
+   "High income": 71
+  },
+  "dunn_holm": {
+   "Low income vs Lower middle income": 0.39498056141448756,
+   "Low income vs Upper middle income": 0.11796298646527228,
+   "Low income vs High income": 0.9775798935172272,
+   "Lower middle income vs Upper middle income": 0.9775798935172272,
+   "Lower middle income vs High income": 0.9775798935172272,
+   "Upper middle income vs High income": 0.36358156951426834
+  },
+  "spearman_gdp_ci": {
+   "rho": -0.010418932530494385,
+   "p": 0.8949843736559053,
+   "ci_lo": -0.16794271101349506,
+   "ci_hi": 0.1492174365456702,
+   "n": 163
+  },
+  "spearman_gdp_kwh": {
+   "rho": 0.9128219196302393,
+   "p": 1.6387901011211884e-64,
+   "ci_lo": 0.8702942312403795,
+   "ci_hi": 0.9396884292190891,
+   "n": 163
+  },
+  "spearman_gdp_lowcarbon": {
+   "rho": 0.006661734107238374,
+   "p": 0.932740224144321,
+   "ci_lo": -0.15813373189154262,
+   "ci_hi": 0.1719310843776042,
+   "n": 163
+  },
+  "spearman_incomerank_ci": {
+   "rho": 0.01708671653820148,
+   "p": 0.8092773326515732,
+   "ci_lo": -0.1257294197719055,
+   "ci_hi": 0.15720634902664843,
+   "n": 202
+  },
+  "kw_kwh": {
+   "H": 144.61335299599875,
+   "p": 3.8249542705600624e-31,
+   "eta2_H": 0.7152189545252462,
+   "medians": {
+    "Low income": 98.8805,
+    "Lower middle income": 692.287,
+    "Upper middle income": 2683.6725,
+    "High income": 6334.26
+   }
+  }
+ },
+ "rq3_robust": {
+  "n_systems_ge1TWh": 158,
+  "n_lt_1TWh": 53,
+  "n_lt_0.1TWh": 11,
+  "kw_H": 8.672988060652926,
+  "kw_p": 0.033969976222729244,
+  "n": 155,
+  "eta2_H": 0.037569457355317394,
+  "spearman_gdp_ci": {
+   "rho": -0.022066548474999177,
+   "p": 0.793634898889558,
+   "ci_lo": -0.19134755740791218,
+   "ci_hi": 0.1466628438173594,
+   "n": 143
+  },
+  "ari_clusters_ge1TWh": 0.9596340519591137,
+  "sil_ge1TWh": 0.42427794420668197
+ },
+ "two_tier": {
+  "low_median": 155.56,
+  "fossil_median": 594.75,
+  "n_low": 79,
+  "n_fossil": 132
+ },
+ "rq4": {
+  "n_both": 208,
+  "stayed": 149,
+  "moved": 59,
+  "stay_pct": 71.63461538461539,
+  "largest_movers": [
+   "United States: Coal-heavy \u2192 Diversified",
+   "Russia: Diversified \u2192 Gas-dominated",
+   "Japan: Diversified \u2192 Coal-heavy",
+   "South Korea: Coal-heavy \u2192 Diversified",
+   "Germany: Coal-heavy \u2192 Diversified",
+   "Mexico: Oil-dependent \u2192 Gas-dominated",
+   "Spain: Coal-heavy \u2192 Diversified",
+   "Vietnam: Hydro-dominated \u2192 Coal-heavy",
+   "Malaysia: Gas-dominated \u2192 Coal-heavy",
+   "Sweden: Hydro-dominated \u2192 Diversified",
+   "Iraq: Oil-dependent \u2192 Gas-dominated",
+   "Netherlands: Gas-dominated \u2192 Diversified",
+   "Kuwait: Oil-dependent \u2192 Gas-dominated",
+   "Chile: Hydro-dominated \u2192 Diversified",
+   "Israel: Coal-heavy \u2192 Gas-dominated",
+   "Singapore: Oil-dependent \u2192 Gas-dominated",
+   "Romania: Coal-heavy \u2192 Diversified",
+   "Greece: Coal-heavy \u2192 Diversified",
+   "Portugal: Coal-heavy \u2192 Diversified",
+   "Bulgaria: Coal-heavy \u2192 Diversified",
+   "Hong Kong: Coal-heavy \u2192 Gas-dominated",
+   "Denmark: Coal-heavy \u2192 Diversified",
+   "Libya: Oil-dependent \u2192 Gas-dominated",
+   "Ireland: Coal-heavy \u2192 Gas-dominated",
+   "Azerbaijan: Oil-dependent \u2192 Gas-dominated"
+  ],
+  "ci_down_n": 133,
+  "ci_up_n": 71,
+  "ci_change_median": -28.030000000000015,
+  "wilcoxon_p": 2.768459605461841e-07,
+  "ci_median_2000": 557.44,
+  "ci_median_2023": 491.815,
+  "from_counts": {
+   "Oil-dependent": 75,
+   "Hydro-dominated": 60,
+   "Coal-heavy": 34,
+   "Gas-dominated": 26,
+   "Diversified": 13
+  },
+  "top20_gen_share": 81.33282997269065
+ },
+ "eu": {
+  "top6": [
+   "France",
+   "Germany",
+   "Spain",
+   "Italy",
+   "Sweden",
+   "Poland"
+  ],
+  "archetypes": {
+   "Diversified": 17,
+   "Gas-dominated": 3,
+   "Hydro-dominated": 3,
+   "Coal-heavy": 2,
+   "Oil-dependent": 2
+  }
+ },
+ "italy": {
+  "ci_2000": 501.67,
+  "ci_2023": 323.23,
+  "ci_2024": 281.4,
+  "mix_2000": {
+   "Coal": 9.7,
+   "Gas": 37.5,
+   "Oil": 33.9,
+   "Nuclear": 0.0,
+   "Hydro": 16.4,
+   "Wind": 0.2,
+   "Solar": 0.0,
+   "Bioenergy": 0.5,
+   "Other renewables": 1.7
+  },
+  "mix_2023": {
+   "Coal": 5.1,
+   "Gas": 45.5,
+   "Oil": 4.9,
+   "Nuclear": 0.0,
+   "Hydro": 15.5,
+   "Wind": 9.0,
+   "Solar": 11.7,
+   "Bioenergy": 6.1,
+   "Other renewables": 2.2
+  },
+  "archetype_2000": "Gas-dominated",
+  "archetype_2023": "Gas-dominated"
+ },
+ "sample_sizes": {
+  "Clean panel 2000-2024": 214,
+  "2023 snapshot": 211,
+  "In both 2000 and 2023": 208,
+  "With World Bank income group": 202,
+  "With GDP per capita (2022)": 163
+ }
+}

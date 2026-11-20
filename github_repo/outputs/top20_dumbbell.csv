@@ -1,0 +1,21 @@
+iso_code,country,carbon_intensity_elec_2000,carbon_intensity_elec,ci_change,archetype_2000,archetype,electricity_generation
+CHN,China,783.51,583.04,-200.47000000000003,Coal-heavy,Coal-heavy,9456.45
+USA,United States,607.52,392.89,-214.63,Coal-heavy,Diversified,4253.91
+IND,India,740.04,713.36,-26.67999999999995,Coal-heavy,Coal-heavy,1918.26
+RUS,Russia,469.94,442.74,-27.19999999999999,Diversified,Gas-dominated,1178.25
+JPN,Japan,424.43,492.45,68.01999999999998,Diversified,Coal-heavy,1006.73
+BRA,Brazil,89.45,96.26,6.810000000000002,Hydro-dominated,Hydro-dominated,708.12
+CAN,Canada,245.69,174.37,-71.32,Hydro-dominated,Hydro-dominated,641.39
+KOR,South Korea,461.59,427.29,-34.299999999999955,Coal-heavy,Diversified,617.49
+FRA,France,79.77,53.26,-26.509999999999998,Diversified,Diversified,518.75
+DEU,Germany,573.16,362.92,-210.23999999999995,Coal-heavy,Diversified,506.72
+SAU,Saudi Arabia,692.34,697.31,4.969999999999914,Gas-dominated,Gas-dominated,429.25
+IRN,Iran,667.45,641.38,-26.07000000000005,Gas-dominated,Gas-dominated,382.02
+MEX,Mexico,525.39,489.05,-36.339999999999975,Oil-dependent,Gas-dominated,351.7
+IDN,Indonesia,630.66,680.8,50.139999999999986,Coal-heavy,Coal-heavy,350.6
+TUR,Turkey,574.13,493.73,-80.39999999999998,Coal-heavy,Coal-heavy,319.79
+GBR,United Kingdom,521.99,235.63,-286.36,Diversified,Diversified,292.53
+TWN,Taiwan,635.2,644.18,8.979999999999905,Coal-heavy,Coal-heavy,282.28
+ESP,Spain,470.89,169.68,-301.21,Coal-heavy,Diversified,279.11
+VNM,Vietnam,321.91,472.4,150.48999999999995,Hydro-dominated,Coal-heavy,276.59
+AUS,Australia,805.98,556.7,-249.27999999999997,Coal-heavy,Coal-heavy,273.11

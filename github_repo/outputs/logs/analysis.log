@@ -1,0 +1,388 @@
+RQ1 {
+"gen_2000": 15278.78,
+"gen_2024": 30930.23,
+"gen_chg_pct": 102.43913453822881,
+"ci_2000": 527.26,
+"ci_2024": 471.08,
+"ci_chg_pct": -10.65508477790843,
+"em_2000": 8055.91,
+"em_2024": 14570.48,
+"em_chg_pct": 80.86696599142742,
+"ci_peak_year": 2007,
+"ci_peak": 554.66,
+"shares_2000": {
+"Coal": 38.02,
+"Gas": 17.97,
+"Oil": 8.67,
+"Nuclear": 16.63,
+"Hydro": 17.21,
+"Wind": 0.2,
+"Solar": 0.01,
+"Bioenergy": 1.01,
+"Other renewables": 0.29
+},
+"shares_2024": {
+"Coal": 34.07,
+"Gas": 22.25,
+"Oil": 2.76,
+"Nuclear": 8.98,
+"Hydro": 14.33,
+"Wind": 8.11,
+"Solar": 6.93,
+"Bioenergy": 2.27,
+"Other renewables": 0.29
+},
+"lowcarbon_2000": 35.344,
+"lowcarbon_2024": 40.914,
+"em_peak_year": 2024
+}
+    k     inertia  silhouette  ari_mean  ari_p05  ari_p95  min_size
+0   2  477819.180       0.412     0.984    0.961    1.000        61
+1   3  302064.606       0.447     0.749    0.559    0.985        59
+2   4  200250.737       0.484     0.929    0.880    0.976        49
+3   5  164169.534       0.485     0.917    0.837    0.973        25
+4   6  145646.559       0.452     0.825    0.703    0.953        21
+5   7  131221.017       0.407     0.794    0.687    0.949        16
+6   8  119272.489       0.418     0.805    0.678    0.933        13
+7   9  110601.169       0.368     0.766    0.663    0.878        14
+8  10  102240.772       0.361     0.756    0.627    0.861        10
+ORDER (by median CI): ['Hydro-dominated', 'Diversified', 'Gas-dominated', 'Oil-dependent', 'Coal-heavy']
+{"k": 5, "silhouette": 0.4847425910445371, "sizes": {"Oil-dependent": 61, "Hydro-dominated": 50, "Gas-dominated": 46, "Diversified": 29, "Coal-heavy": 25}, "ari_ward": 0.8476117681373209, "ari_hellinger": 0.8420732006445997, "ari_zscore": 0.8343056432285876, "ari_k4": 0.8578302483225674, "ari_k6": 0.8269601617249469, "neg_sil_n": 4, "sil_by_cluster": {"Coal-heavy": 0.4, "Diversified": 0.166, "Gas-dominated": 0.499, "Hydro-dominated": 0.467, "Oil-dependent": 0.675}, "k4": {"sil": 0.48366240142894495, "ari": 0.9285364175704681, "ari_p05": 0.8802318877067747}, "k5": {"sil": 0.4847425910445371, "ari": 0.9174152068126818, "ari_p05": 0.8370051821373817}, "k6": {"sil": 0.45231490538267716, "ari": 0.8250708578198769, "ari_p05": 0.7025332561895375}}
+                 0: Coal 32%+Hydro 14% (n=52)  1: Gas 70%+Oil 8% (n=49)  2: Hydro 71%+Oil 7% (n=50)  3: Oil 84%+Solar 6% (n=60)
+k5_archetype                                                                                                                   
+Coal-heavy                                 25                         0                           0                           0
+Diversified                                25                         3                           1                           0
+Gas-dominated                               0                        46                           0                           0
+Hydro-dominated                             1                         0                          49                           0
+Oil-dependent                               1                         0                           0                          60
+                 0: Gas 72%+Oil 9% (n=45)  1: Hydro 74%+Gas 6% (n=45)  2: Oil 89%+Solar 5% (n=51)  3: Coal 60%+Gas 13% (n=21)  4: Nuclear 21%+Gas 19% (n=27)  5: Oil 41%+Hydro 25% (n=22)
+k5_archetype                                                                                                                                                                             
+Coal-heavy                              0                           0                           0                          21                              2                            2
+Diversified                             0                           0                           0                           0                             24                            5
+Gas-dominated                          45                           0                           0                           0                              1                            0
+Hydro-dominated                         0                          45                           0                           0                              0                            5
+Oil-dependent                           0                           0                          51                           0                              0                           10
+ward_cluster       0   1   2   3   4
+kmeans_archetype                    
+Coal-heavy         1   1   0   1  22
+Diversified        2   3   2  22   0
+Gas-dominated      0   0  45   1   0
+Hydro-dominated    0  45   1   1   3
+Oil-dependent     61   0   0   0   0
+SECOND METHOD {"ward_ari": 0.8476117681373209, "ward_sizes": [25, 25, 48, 49, 64], "average_linkage_ari": 0.8079706188523019, "complete_linkage_ari": 0.7661849792894158, "gmm_tied_ari": 0.9315649863917406, "gmm_full_ari": 0.4082631665883653, "gmm_spec": "GaussianMixture(k=5, n_init=20, reg_covar=1e-3, seed 0) fitted on PC1-PC4"}
+K SENS {"k4": {"sizes": [49, 50, 52, 60], "ari_vs_k5": 0.8578302483225674, "silhouette": 0.48366240142894495, "top2_sources_per_cluster": {"0": "Coal 32%+Hydro 14%", "1": "Gas 70%+Oil 8%", "2": "Hydro 71%+Oil 7%", "3": "Oil 84%+Solar 6%"}}, "k6": {"sizes": [21, 22, 27, 45, 45, 51], "ari_vs_k5": 0.8269601617249469, "silhouette": 0.45231490538267716, "top2_sources_per_cluster": {"0": "Gas 72%+Oil 9%", "1": "Hydro 74%+Gas 6%", "2": "Oil 89%+Solar 5%", "3": "Coal 60%+Gas 13%", "4": "Nuclear 21%+Gas 19%", "5": "Oil 41%+Hydro 25%"}}}
+                      trust        knn_jaccard_vs_ref        sil_kmeans_labels       
+                       mean    min               mean    min              mean    min
+n_neighbors min_dist                                                                 
+10          0.1       0.978  0.977              0.756  0.746             0.400  0.292
+15          0.1       0.979  0.978              0.825  0.762             0.394  0.354
+            0.3       0.978  0.975              0.761  0.739             0.455  0.411
+30          0.1       0.976  0.975              0.681  0.661             0.585  0.577
+{'ref': 'n_neighbors=15, min_dist=0.1, metric=euclidean, init=PCA(2), seed=0', 'trust_ref': 0.9777723906376893, 'trust_pca2': 0.9339401946643071, 'trust_min': 0.9752657543544927, 'trust_max': 0.9801941794644914, 'jacc_seed_mean': 0.7817520365225529, 'jacc_all_min': 0.6613400054151012}
+                  n  gen_share  pop_share  ci_median  ci_q1  ci_q3  kwh_pc_median  gdp_pc_median  gdp_n  median_gen_twh
+archetype                                                                                                              
+Hydro-dominated  50        8.0       14.3      130.0   49.4  230.2         1726.6         5305.4     43            12.4
+Diversified      29       25.6       14.2      225.1  120.6  309.9         4538.9        29788.8     28            46.1
+Gas-dominated    46       15.4       19.8      562.0  490.2  673.3         2765.0        13485.5     43            33.2
+Oil-dependent    61        0.4        3.3      600.0  521.5  644.4         1791.3         4092.3     26             0.5
+Coal-heavy       25       50.6       48.4      607.9  556.7  680.8         3729.3        16104.8     23           113.6
+means
+                  Coal   Gas   Oil  Nuclear  Hydro  Wind  Solar  Bioenergy  Other renewables
+archetype                                                                                  
+Hydro-dominated   4.8   5.6   8.2      1.0   71.4   2.1    2.8        2.9               1.2
+Diversified       8.2  14.7   6.4     17.5   15.0  16.5    9.3        9.3               3.2
+Gas-dominated     3.1  71.9   8.8      1.7    8.3   2.0    2.6        1.5               0.0
+Oil-dependent     1.3   1.1  83.1      0.0    4.1   2.2    6.3        1.6               0.2
+Coal-heavy       55.9  12.2   4.6      2.6   13.1   4.6    4.8        1.5               0.7
+medians
+                  Coal   Gas   Oil  Nuclear  Hydro  Wind  Solar  Bioenergy  Other renewables
+archetype                                                                                  
+Hydro-dominated   0.0   0.0   1.5      0.0   72.1   0.0    0.8        0.5               0.0
+Diversified       4.1  10.9   3.6     13.0   12.7  13.3    8.8        5.8               0.0
+Gas-dominated     0.0  70.7   2.2      0.0    1.7   0.0    0.6        0.1               0.0
+Oil-dependent     0.0   0.0  86.7      0.0    0.0   0.0    2.9        0.0               0.0
+Coal-heavy       57.4   9.5   1.1      0.0    7.7   3.3    5.2        0.7               0.0
+Hydro-dominated | largest: ['Brazil', 'Canada', 'Norway', 'Colombia', 'Venezuela', 'Austria', 'Switzerland', 'Peru', 'Paraguay', 'Laos', 'New Zealand', 'Ecuador']
+Diversified | largest: ['United States', 'South Korea', 'France', 'Germany', 'United Kingdom', 'Spain', 'Pakistan', 'Sweden', 'Netherlands', 'Chile', 'Belgium', 'Finland']
+Gas-dominated | largest: ['Russia', 'Saudi Arabia', 'Iran', 'Mexico', 'Italy', 'Egypt', 'Thailand', 'United Arab Emirates', 'Argentina', 'Iraq', 'Bangladesh', 'Algeria']
+Oil-dependent | largest: ['Puerto Rico', 'Cuba', 'Honduras', 'Senegal', 'Lebanon', 'Mali', 'Estonia', 'Cyprus', 'Yemen', 'Papua New Guinea', 'Mauritius', 'Bahamas']
+Coal-heavy | largest: ['China', 'India', 'Japan', 'Indonesia', 'Turkey', 'Taiwan', 'Vietnam', 'Australia', 'South Africa', 'Malaysia', 'Poland', 'Philippines']
+Italy: [{'archetype': 'Gas-dominated', 'carbon_intensity_elec': 323.2, 'Coal': 5.1, 'Gas': 45.5, 'Oil': 4.9, 'Nuclear': 0.0, 'Hydro': 15.5, 'Wind': 9.0, 'Solar': 11.7, 'Bioenergy': 6.1, 'Other renewables': 2.2}]
+                 variable               col        H  eta2_H                                            note
+1               Gas share               Gas  144.356   0.681  descriptive separation only (clustering input)
+4             Hydro share             Hydro  140.625   0.663  descriptive separation only (clustering input)
+2               Oil share               Oil  131.520   0.619  descriptive separation only (clustering input)
+0              Coal share              Coal  101.938   0.475  descriptive separation only (clustering input)
+3           Nuclear share           Nuclear   61.876   0.281  descriptive separation only (clustering input)
+5              Wind share              Wind   61.086   0.277  descriptive separation only (clustering input)
+7         Bioenergy share         Bioenergy   55.871   0.252  descriptive separation only (clustering input)
+6             Solar share             Solar   32.048   0.136  descriptive separation only (clustering input)
+8  Other renewables share  Other renewables   22.848   0.091  descriptive separation only (clustering input)
+income_group     High income  Low income  Lower middle income  Upper middle income
+archetype                                                                         
+Hydro-dominated           10          16                    9                   14
+Diversified               21           0                    4                    3
+Gas-dominated             16           2                   14                   14
+Oil-dependent             18          10                   16                   10
+Coal-heavy                 6           0                    8                   11
+min expected: 3.47
+continent        Africa  Asia  Europe  North America  Oceania  South America
+archetype                                                                   
+Hydro-dominated      19     8       8              5        2              8
+Diversified           2     3      18              4        0              2
+Gas-dominated        13    21       7              3        0              2
+Oil-dependent        18     5       3             22       11              2
+Coal-heavy            3    13       6              1        2              0
+min expected: 1.66
+                         variable                  role                                    test  stat  df    n        p  effect effect_name     q_BH
+0  Carbon intensity (gCO2e/kWh) †  derived from the mix                          Kruskal-Wallis   143   4  211 6.88e-30   0.674      eta2_H  5.5e-29
+1     System size (TWh generated)           independent                          Kruskal-Wallis   106   4  211 4.19e-22   0.497      eta2_H 1.68e-21
+7                       Continent           independent  Chi-square (Monte-Carlo, 20,000 perms)   117  20  211    5e-05   0.372  Cramér's V 6.67e-05
+6         World Bank income group           independent  Chi-square (Monte-Carlo, 20,000 perms)  51.2  12  202    5e-05   0.291  Cramér's V 6.67e-05
+2                      Population           independent                          Kruskal-Wallis  62.7   4  211 7.79e-13   0.285      eta2_H 2.08e-12
+3           GDP per capita (2022)           independent                          Kruskal-Wallis  38.1   4  163 1.05e-07   0.216      eta2_H 2.09e-07
+4    Electricity per person (kWh)           independent                          Kruskal-Wallis  19.9   4  211 0.000529  0.0771      eta2_H 0.000604
+5       Net imports (% of demand)           independent                          Kruskal-Wallis  1.35   4  211    0.853 -0.0129      eta2_H    0.853
+                         variable                a              b  p_holm       med_a       med_b
+0           carbon_intensity_elec  Hydro-dominated    Diversified  1.0000    129.9550    225.0800
+1           carbon_intensity_elec  Hydro-dominated  Gas-dominated  0.0000    129.9550    562.0450
+2           carbon_intensity_elec  Hydro-dominated  Oil-dependent  0.0000    129.9550    600.0000
+3           carbon_intensity_elec  Hydro-dominated     Coal-heavy  0.0000    129.9550    607.8800
+4           carbon_intensity_elec      Diversified  Gas-dominated  0.0000    225.0800    562.0450
+5           carbon_intensity_elec      Diversified  Oil-dependent  0.0000    225.0800    600.0000
+6           carbon_intensity_elec      Diversified     Coal-heavy  0.0000    225.0800    607.8800
+7           carbon_intensity_elec    Gas-dominated  Oil-dependent  1.0000    562.0450    600.0000
+8           carbon_intensity_elec    Gas-dominated     Coal-heavy  1.0000    562.0450    607.8800
+9           carbon_intensity_elec    Oil-dependent     Coal-heavy  1.0000    600.0000    607.8800
+10         per_capita_electricity  Hydro-dominated    Diversified  0.0109   1726.6200   4538.9270
+11         per_capita_electricity  Hydro-dominated  Gas-dominated  0.1857   1726.6200   2765.0495
+12         per_capita_electricity  Hydro-dominated  Oil-dependent  1.0000   1726.6200   1791.3000
+13         per_capita_electricity  Hydro-dominated     Coal-heavy  0.0838   1726.6200   3729.3260
+14         per_capita_electricity      Diversified  Gas-dominated  0.6579   4538.9270   2765.0495
+15         per_capita_electricity      Diversified  Oil-dependent  0.0054   4538.9270   1791.3000
+16         per_capita_electricity      Diversified     Coal-heavy  1.0000   4538.9270   3729.3260
+17         per_capita_electricity    Gas-dominated  Oil-dependent  0.1259   2765.0495   1791.3000
+18         per_capita_electricity    Gas-dominated     Coal-heavy  1.0000   2765.0495   3729.3260
+19         per_capita_electricity    Oil-dependent     Coal-heavy  0.0560   1791.3000   3729.3260
+20                  gdp_pc_latest  Hydro-dominated    Diversified  0.0000   5305.4260  29788.8305
+21                  gdp_pc_latest  Hydro-dominated  Gas-dominated  0.0218   5305.4260  13485.5170
+22                  gdp_pc_latest  Hydro-dominated  Oil-dependent  0.7902   5305.4260   4092.3337
+23                  gdp_pc_latest  Hydro-dominated     Coal-heavy  0.0218   5305.4260  16104.7781
+24                  gdp_pc_latest      Diversified  Gas-dominated  0.0969  29788.8305  13485.5170
+25                  gdp_pc_latest      Diversified  Oil-dependent  0.0000  29788.8305   4092.3337
+26                  gdp_pc_latest      Diversified     Coal-heavy  0.3878  29788.8305  16104.7781
+27                  gdp_pc_latest    Gas-dominated  Oil-dependent  0.0059  13485.5170   4092.3337
+28                  gdp_pc_latest    Gas-dominated     Coal-heavy  0.7902  13485.5170  16104.7781
+29                  gdp_pc_latest    Oil-dependent     Coal-heavy  0.0059   4092.3337  16104.7781
+30  net_elec_imports_share_demand  Hydro-dominated    Diversified  1.0000      0.0000      0.4420
+31  net_elec_imports_share_demand  Hydro-dominated  Gas-dominated  1.0000      0.0000      0.0000
+32  net_elec_imports_share_demand  Hydro-dominated  Oil-dependent  1.0000      0.0000      0.0000
+33  net_elec_imports_share_demand  Hydro-dominated     Coal-heavy  1.0000      0.0000      0.0000
+34  net_elec_imports_share_demand      Diversified  Gas-dominated  1.0000      0.4420      0.0000
+35  net_elec_imports_share_demand      Diversified  Oil-dependent  1.0000      0.4420      0.0000
+36  net_elec_imports_share_demand      Diversified     Coal-heavy  1.0000      0.4420      0.0000
+37  net_elec_imports_share_demand    Gas-dominated  Oil-dependent  1.0000      0.0000      0.0000
+38  net_elec_imports_share_demand    Gas-dominated     Coal-heavy  1.0000      0.0000      0.0000
+39  net_elec_imports_share_demand    Oil-dependent     Coal-heavy  1.0000      0.0000      0.0000
+archetype         Hydro-dominated  Diversified  Gas-dominated  Oil-dependent  Coal-heavy
+variable                                                                                
+Coal                        -0.07         0.22          -0.16          -0.44        0.99
+Gas                         -0.31         0.12           1.00          -0.64        0.03
+Oil                         -0.46        -0.23          -0.31           1.00       -0.40
+Nuclear                     -0.12         0.53          -0.03          -0.21        0.09
+Hydro                        1.00         0.09          -0.32          -0.67        0.02
+Wind                        -0.20         0.70          -0.16          -0.30        0.39
+Solar                       -0.24         0.56          -0.24          -0.01        0.20
+Bioenergy                    0.04         0.73          -0.16          -0.40        0.13
+Other renewables            -0.00         0.29          -0.13          -0.08        0.05
+                                      model  bal_acc  bal_acc_sd  f1_macro  f1_sd    acc
+0                         Majority baseline    0.200       0.000     0.090  0.003  0.289
+1                  Decision tree (5 leaves)    0.950       0.034     0.945  0.033  0.955
+2                   Decision tree (depth 3)    0.772       0.021     0.714  0.018  0.851
+3                 Random forest (500 trees)    0.960       0.034     0.958  0.033  0.966
+4  Multinomial logistic (L2, C=1, z-scored)    0.947       0.035     0.944  0.036  0.952
+|--- Oil <= 47.3
+|   |--- Gas <= 43.5
+|   |   |--- Hydro <= 39.4
+|   |   |   |--- Coal <= 30.3
+|   |   |   |   |--- class: Diversified
+|   |   |   |--- Coal >  30.3
+|   |   |   |   |--- class: Coal-heavy
+|   |   |--- Hydro >  39.4
+|   |   |   |--- class: Hydro-dominated
+|   |--- Gas >  43.5
+|   |   |--- class: Gas-dominated
+|--- Oil >  47.3
+|   |--- class: Oil-dependent
+
+tree hold-out bal acc: 0.9533333333333334 n_test 64
+pred             Coal-heavy  Diversified  Gas-dominated  Hydro-dominated  Oil-dependent
+true                                                                                   
+Coal-heavy                8            0              0                0              0
+Diversified               0            8              0                1              0
+Gas-dominated             0            0             14                0              0
+Hydro-dominated           0            0              1               14              0
+Oil-dependent             0            1              0                0             17
+            feature  imp_mean  imp_sd    p05    p95
+2               Oil     0.323   0.050  0.252  0.409
+1               Gas     0.273   0.045  0.197  0.336
+4             Hydro     0.227   0.042  0.157  0.304
+0              Coal     0.173   0.029  0.122  0.219
+3           Nuclear     0.020   0.009  0.000  0.022
+5              Wind     0.013   0.009 -0.011  0.022
+8  Other renewables     0.000   0.000  0.000  0.000
+7         Bioenergy    -0.004   0.018 -0.036  0.025
+6             Solar    -0.018   0.013 -0.036  0.000
+logit coef (log-odds per +1 SD):
+                  Coal   Gas   Oil  Nuclear  Hydro  Wind  Solar  Bioenergy  Other renewables
+Hydro-dominated -0.52 -0.93 -0.44    -0.11   2.17 -0.53  -0.15      -0.15             -0.22
+Diversified     -0.09  0.01 -0.50     0.96  -0.14  0.62   0.53       0.51              0.30
+Gas-dominated   -0.80  2.09 -0.48    -0.58  -0.52 -0.12  -0.57      -0.04             -0.09
+Oil-dependent   -0.45 -0.92  1.79    -0.37  -0.95 -0.11   0.23      -0.08             -0.03
+Coal-heavy       1.86 -0.25 -0.37     0.09  -0.57  0.14  -0.06      -0.24              0.04
+context model: {'n': 202, 'features': ['income_rank', 'log_kwh_pc', 'log_pop', 'Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America'], 'baseline': {'bal_acc': np.float64(0.19999999999999996), 'sd': np.float64(5.551115123125783e-17), 'acc': np.float64(0.2673170731707317)}, 'rf_context': {'bal_acc': np.float64(0.4679151515151514), 'sd': np.float64(0.06676738874309429), 'acc': np.float64(0.48998780487804877)}}
+RQ3 {
+"kw_H": 6.497488606051382,
+"kw_p": 0.08976159979047016,
+"n": 202,
+"eta2_H": 0.017664083868946374,
+"medians": {
+"Low income": 350.365,
+"Lower middle income": 500.0,
+"Upper middle income": 566.44,
+"High income": 436.62
+},
+"iqr": {
+"Low income": [
+120.5325,
+593.2950000000001
+],
+"Lower middle income": [
+382.57,
+603.06
+],
+"Upper middle income": [
+305.3375,
+644.5174999999999
+],
+"High income": [
+172.025,
+611.11
+]
+},
+"ns": {
+"Low income": 28,
+"Lower middle income": 51,
+"Upper middle income": 52,
+"High income": 71
+},
+"dunn_holm": {
+"Low income vs Lower middle income": 0.39498056141448756,
+"Low income vs Upper middle income": 0.11796298646527228,
+"Low income vs High income": 0.9775798935172272,
+"Lower middle income vs Upper middle income": 0.9775798935172272,
+"Lower middle income vs High income": 0.9775798935172272,
+"Upper middle income vs High income": 0.36358156951426834
+},
+"spearman_gdp_ci": {
+"rho": -0.010418932530494385,
+"p": 0.8949843736559053,
+"ci_lo": -0.16794271101349506,
+"ci_hi": 0.1492174365456702,
+"n": 163
+},
+"spearman_gdp_kwh": {
+"rho": 0.9128219196302393,
+"p": 1.6387901011211884e-64,
+"ci_lo": 0.8702942312403795,
+"ci_hi": 0.9396884292190891,
+"n": 163
+},
+"spearman_gdp_lowcarbon": {
+"rho": 0.006661734107238374,
+"p": 0.932740224144321,
+"ci_lo": -0.15813373189154262,
+"ci_hi": 0.1719310843776042,
+"n": 163
+},
+"spearman_incomerank_ci": {
+"rho": 0.01708671653820148,
+"p": 0.8092773326515732,
+"ci_lo": -0.1257294197719055,
+"ci_hi": 0.15720634902664843,
+"n": 202
+},
+"kw_kwh": {
+"H": 144.61335299599875,
+"p": 3.8249542705600624e-31,
+"eta2_H": 0.7152189545252462,
+"medians": {
+"Low income": 98.8805,
+"Lower middle income": 692.287,
+"Upper middle income": 2683.6725,
+"High income": 6334.26
+}
+}
+}
+ROBUST {"n_systems_ge1TWh": 158, "n_lt_1TWh": 53, "n_lt_0.1TWh": 11, "kw_H": 8.672988060652926, "kw_p": 0.033969976222729244, "n": 155, "eta2_H": 0.037569457355317394, "spearman_gdp_ci": {"rho": -0.022066548474999177, "p": 0.793634898889558, "ci_lo": -0.19134755740791218, "ci_hi": 0.1466628438173594, "n": 143}, "ari_clusters_ge1TWh": 0.9596340519591137, "sil_ge1TWh": 0.42427794420668197}
+raw Dunn hydro vs diversified: 0.2974735758401883 MWU: 0.01083924451193697
+{'low_median': 155.56, 'fossil_median': 594.75, 'n_low': 79, 'n_fossil': 132}
+CI>900: [['Bahrain', 902.59, 37.47], ['Falkland Islands', 1000.0, 0.01], ['Montserrat', 1000.0, 0.01], ['Saint Helena', 1000.0, 0.01], ['Turkmenistan', 1306.14, 32.6], ['Uzbekistan', 1113.28, 76.8]]
+neg silhouette: [['Armenia', 'Diversified', -0.04407217310839317], ['Guatemala', 'Diversified', -0.09768718985447061], ['South Korea', 'Diversified', -0.06971596328930171], ['United States', 'Diversified', -0.05115529118578544]]
+archetype        Hydro-dominated  Diversified  Gas-dominated  Oil-dependent  Coal-heavy
+archetype_2000                                                                         
+Hydro-dominated               44            4              6              4           2
+Diversified                    1           10              1              0           1
+Gas-dominated                  0            2             23              0           1
+Oil-dependent                  2            3             13             54           3
+Coal-heavy                     2           10              3              1          18
+{'n_both': 208, 'stayed': 149, 'moved': 59, 'stay_pct': 71.63461538461539, 'largest_movers': ['United States: Coal-heavy → Diversified', 'Russia: Diversified → Gas-dominated', 'Japan: Diversified → Coal-heavy', 'South Korea: Coal-heavy → Diversified', 'Germany: Coal-heavy → Diversified', 'Mexico: Oil-dependent → Gas-dominated', 'Spain: Coal-heavy → Diversified', 'Vietnam: Hydro-dominated → Coal-heavy', 'Malaysia: Gas-dominated → Coal-heavy', 'Sweden: Hydro-dominated → Diversified', 'Iraq: Oil-dependent → Gas-dominated', 'Netherlands: Gas-dominated → Diversified', 'Kuwait: Oil-dependent → Gas-dominated', 'Chile: Hydro-dominated → Diversified', 'Israel: Coal-heavy → Gas-dominated', 'Singapore: Oil-dependent → Gas-dominated', 'Romania: Coal-heavy → Diversified', 'Greece: Coal-heavy → Diversified', 'Portugal: Coal-heavy → Diversified', 'Bulgaria: Coal-heavy → Diversified', 'Hong Kong: Coal-heavy → Gas-dominated', 'Denmark: Coal-heavy → Diversified', 'Libya: Oil-dependent → Gas-dominated', 'Ireland: Coal-heavy → Gas-dominated', 'Azerbaijan: Oil-dependent → Gas-dominated']}
+                 count   mean    std    min    25%    50%    75%    max
+archetype_2000                                                         
+Coal-heavy        34.0 -153.0  153.0 -486.0 -252.0 -119.0  -66.0  148.0
+Diversified       13.0  -96.0  104.0 -286.0 -136.0  -99.0  -27.0   68.0
+Gas-dominated     26.0  -40.0   85.0 -272.0  -57.0  -13.0    4.0   98.0
+Hydro-dominated   60.0   42.0  137.0 -204.0  -32.0   11.0  121.0  658.0
+Oil-dependent     75.0  -72.0  133.0 -508.0 -127.0  -49.0    0.0  225.0
+                 country  carbon_intensity_elec_2000  carbon_intensity_elec  ci_change   archetype_2000        archetype  electricity_generation
+iso_code                                                                                                                                        
+CHN                China                       784.0                  583.0     -200.0       Coal-heavy       Coal-heavy                  9456.0
+USA        United States                       608.0                  393.0     -215.0       Coal-heavy      Diversified                  4254.0
+IND                India                       740.0                  713.0      -27.0       Coal-heavy       Coal-heavy                  1918.0
+RUS               Russia                       470.0                  443.0      -27.0      Diversified    Gas-dominated                  1178.0
+JPN                Japan                       424.0                  492.0       68.0      Diversified       Coal-heavy                  1007.0
+BRA               Brazil                        89.0                   96.0        7.0  Hydro-dominated  Hydro-dominated                   708.0
+CAN               Canada                       246.0                  174.0      -71.0  Hydro-dominated  Hydro-dominated                   641.0
+KOR          South Korea                       462.0                  427.0      -34.0       Coal-heavy      Diversified                   617.0
+FRA               France                        80.0                   53.0      -27.0      Diversified      Diversified                   519.0
+DEU              Germany                       573.0                  363.0     -210.0       Coal-heavy      Diversified                   507.0
+SAU         Saudi Arabia                       692.0                  697.0        5.0    Gas-dominated    Gas-dominated                   429.0
+IRN                 Iran                       667.0                  641.0      -26.0    Gas-dominated    Gas-dominated                   382.0
+MEX               Mexico                       525.0                  489.0      -36.0    Oil-dependent    Gas-dominated                   352.0
+IDN            Indonesia                       631.0                  681.0       50.0       Coal-heavy       Coal-heavy                   351.0
+TUR               Turkey                       574.0                  494.0      -80.0       Coal-heavy       Coal-heavy                   320.0
+GBR       United Kingdom                       522.0                  236.0     -286.0      Diversified      Diversified                   293.0
+TWN               Taiwan                       635.0                  644.0        9.0       Coal-heavy       Coal-heavy                   282.0
+ESP                Spain                       471.0                  170.0     -301.0       Coal-heavy      Diversified                   279.0
+VNM              Vietnam                       322.0                  472.0      150.0  Hydro-dominated       Coal-heavy                   277.0
+AUS            Australia                       806.0                  557.0     -249.0       Coal-heavy       Coal-heavy                   273.0
+RQ4b {'n_both': 208, 'stayed': 149, 'moved': 59, 'stay_pct': 71.63461538461539, 'ci_down_n': 133, 'ci_up_n': 71, 'ci_change_median': -28.030000000000015, 'wilcoxon_p': 2.768459605461841e-07, 'ci_median_2000': 557.44, 'ci_median_2023': 491.815, 'from_counts': {'Oil-dependent': 75, 'Hydro-dominated': 60, 'Coal-heavy': 34, 'Gas-dominated': 26, 'Diversified': 13}}
+         country  electricity_generation  carbon_intensity_elec      archetype
+68        France                   519.0                   53.0    Diversified
+74       Germany                   507.0                  363.0    Diversified
+180        Spain                   279.0                  170.0    Diversified
+97         Italy                   262.0                  323.0  Gas-dominated
+184       Sweden                   166.0                   38.0    Diversified
+152       Poland                   166.0                  651.0     Coal-heavy
+135  Netherlands                   120.0                  268.0    Diversified
+17       Belgium                    82.0                  135.0    Diversified
+67       Finland                    82.0                   81.0    Diversified
+49       Czechia                    76.0                  443.0     Coal-heavy
+EU archetypes: {'Diversified': 17, 'Gas-dominated': 3, 'Hydro-dominated': 3, 'Coal-heavy': 2, 'Oil-dependent': 2}
+{'ci_2000': np.float64(501.67), 'ci_2023': np.float64(323.23), 'ci_2024': np.float64(281.4), 'mix_2000': {'Coal': 9.7, 'Gas': 37.5, 'Oil': 33.9, 'Nuclear': 0.0, 'Hydro': 16.4, 'Wind': 0.2, 'Solar': 0.0, 'Bioenergy': 0.5, 'Other renewables': 1.7}, 'mix_2023': {'Coal': 5.1, 'Gas': 45.5, 'Oil': 4.9, 'Nuclear': 0.0, 'Hydro': 15.5, 'Wind': 9.0, 'Solar': 11.7, 'Bioenergy': 6.1, 'Other renewables': 2.2}, 'archetype_2000': 'Gas-dominated', 'archetype_2023': 'Gas-dominated'}
+                         sample    n                                                                                                                                                               excluded                                                   used_for
+0         Clean panel 2000-2024  214                                                                                                                                                                      -                                          trends (F02, F15)
+1                 2023 snapshot  211                                                                                                                  no usable 2023 data: Lesotho, Ukraine, Western Sahara  PCA, UMAP, clustering, external tests (F03-F09, F11, F12)
+2         In both 2000 and 2023  208                                                                                                           series start after 2000: East Timor, Montenegro, South Sudan                                     transitions (F13, F14)
+3  With World Bank income group  202  9 territories without a WB class: Cook Islands, Falkland Islands, French Guiana, Guadeloupe, Martinique, Montserrat, Reunion, Saint Helena, Saint Pierre and Miquelon                                    income tests (F10, F11)
+4    With GDP per capita (2022)  163                                                                                                                                48 systems not in the Maddison database                       GDP correlations and test (F10, F11)

@@ -1,0 +1,61 @@
+Kosovo rows with generation: 26
+zero-generation rows: [['Lesotho', 2023], ['Lesotho', 2024], ['Niue', 2000], ['Niue', 2001], ['Niue', 2002], ['Niue', 2003], ['Niue', 2004], ['Niue', 2005], ['Niue', 2006], ['Niue', 2007], ['Niue', 2008], ['Niue', 2009], ['Niue', 2010], ['Niue', 2011], ['Niue', 2012], ['Niue', 2013], ['Niue', 2014], ['Niue', 2015], ['Niue', 2016], ['Niue', 2017]] 26
+rows with ≥1 missing share: 820 | closure holds (fixable): 820 | not fixable: 0
+Empty DataFrame
+Columns: [country, year, coal_share_elec, gas_share_elec, oil_share_elec, nuclear_share_elec, hydro_share_elec, wind_share_elec, solar_share_elec, biofuel_share_elec, other_renewables_share_elec_exc_biofuel]
+Index: []
+2023: naive dropna would drop 29 systems = 64.9% of generation; e.g. ['China', 'India', 'Russia', 'Japan', 'Brazil', 'Canada', 'South Korea', 'Saudi Arabia']
+closure after fix: min 99.998 max 100.002
+income dup codes: 0 {'High income': 81, 'Upper middle income': 55, 'Lower middle income': 54, 'Low income': 28}
+['Entity', 'Code', 'Year', 'Unnamed: 3'] [['Abkhazia', 'OWID_ABK', 2015, 'Asia'], ['Afghanistan', 'AFG', 2015, 'Asia']]
+2023 systems: 211 | no income group: 9 ['Cook Islands', 'Falkland Islands', 'French Guiana', 'Guadeloupe', 'Martinique', 'Montserrat', 'Reunion', 'Saint Helena', 'Saint Pierre and Miquelon'] | no continent: []
+gdp latest year distribution: {2022: 165}
+panel (5296, 32) | systems 214 | xs2023 (211, 32) | gdp_pc available in xs: 163 | CI missing: 0
+per-year n complete: {2000: 211, 2001: 211, 2002: 211, 2003: 212, 2004: 212, 2005: 213, 2006: 213, 2007: 213, 2008: 213, 2009: 213, 2010: 212, 2011: 212, 2012: 213, 2013: 213, 2014: 213, 2015: 213, 2016: 213, 2017: 213, 2018: 213, 2019: 213, 2020: 213, 2021: 213, 2022: 213, 2023: 211, 2024: 196}
+                                     step                                                                                                                            action                                                                                                                                           reason  rows_before  rows_after
+0  Remove aggregate & historical entities  dropped 93 entities without ISO code (regions, income groups, OECD/G20, USSR…); 'World' row kept separately for the global trend                                                                                            aggregates mixed with country rows would double-count        23377       17291
+1                        Column selection                                                                                                            kept 22 of 130 columns  other 100+ columns are primary-energy / per-fuel consumption metrics outside the question (and affected by OWID's primary-energy method change)        17291       17291
+2                   Time window 2000–2024                                                                                                      dropped years <2000 and 2025                                  coverage jumps from 81 to 212 countries in 2000 (Ember series start); 2025 has only 91 countries (partial year)        17291        5484
+3                     No electricity data                                                                                     dropped country-years with missing generation                                                                                                                               nothing to analyse         5484        5322
+4                         Zero generation                                                                           dropped country-years with generation = 0 TWh (rounded)                                                                       shares undefined (0/0); affects 2 tiny systems, e.g. Niue, Lesotho 2023–24         5322        5296
+5                        Structural zeros                                NaN → 0 in 820 country-years where the observed shares already sum to 100 % (|residual| < 0.05 pp)                                       source stores 'no such plant' as missing; plain dropna() would delete China, India, Japan, Russia, Brazil…         5296        5296
+6                         External join 1                                                                         left-join World Bank income group (2020 vintage) on ISO-3                                            enrichment for RQ3; 9 territories without a WB class keep NaN and are excluded only from income tests         5296        5296
+7                         External join 2                                                                             left-join OWID continent + UN M49 sub-region on ISO-3                                                                                                 regional context for labels and the Europe focus         5296        5296
+8                       Derived variables                                             GDP per capita = gdp / population (latest available year ≤ 2022, Maddison 2011 int-$)                                              external explanatory variable; GDP is not published for 2023+, so it is carried forward and flagged         5296        5296
+raw shape (23377, 130)
+xs describe:
+                                count      mean  ...       75%        max
+Coal                           211.0      9.96  ...     10.62      98.76
+Gas                            211.0     20.79  ...     34.61      99.97
+Oil                            211.0     29.32  ...     58.54     100.00
+Nuclear                        211.0      3.33  ...      0.00      65.19
+Hydro                          211.0     23.53  ...     38.59     100.00
+Wind                           211.0      4.37  ...      4.59      57.22
+Solar                          211.0      4.90  ...      6.88      50.00
+Bioenergy                      211.0      2.93  ...      2.07      33.88
+Other renewables               211.0      0.88  ...      0.00      47.11
+carbon_intensity_elec          211.0    440.48  ...    620.67    1306.14
+electricity_generation         211.0    140.10  ...     52.67    9456.45
+per_capita_electricity         211.0   4125.58  ...   5559.93   51114.80
+gdp_pc_latest                  163.0  19422.70  ...  27929.74  131990.53
+net_elec_imports_share_demand  211.0      3.11  ...      2.17      89.27
+
+[14 rows x 8 columns]
+               country  carbon_intensity_elec   Coal      Oil     Gas
+1616  Falkland Islands                1000.00  0.000  100.000   0.000
+3229        Montserrat                1000.00  0.000  100.000   0.000
+4028      Saint Helena                1000.00  0.000  100.000   0.000
+5135        Uzbekistan                1113.28  7.422    1.953  80.729
+4913      Turkmenistan                1306.14  0.000    0.000  99.969
+      country  per_capita_electricity
+3904    Qatar               18925.268
+348   Bahrain               23871.199
+3604   Norway               27835.723
+2262  Iceland               51114.797
+           country  net_elec_imports_share_demand  electricity_generation
+2687          Laos                       -205.848                   52.30
+3754      Paraguay                       -134.172                   53.04
+4913  Turkmenistan                        -38.136                   32.60
+23     Afghanistan                         86.509                    0.97
+2885         Macao                         88.982                    0.66
+3679     Palestine                         89.268                    0.85

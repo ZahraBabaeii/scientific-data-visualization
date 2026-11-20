@@ -1,0 +1,6 @@
+archetype_2000,Hydro-dominated,Diversified,Gas-dominated,Oil-dependent,Coal-heavy
+Hydro-dominated,44,4,6,4,2
+Diversified,1,10,1,0,1
+Gas-dominated,0,2,23,0,1
+Oil-dependent,2,3,13,54,3
+Coal-heavy,2,10,3,1,18

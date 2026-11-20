@@ -1,0 +1,21 @@
+saved F01_coverage
+saved F02_world_trend
+saved F03_pca
+saved F04_embeddings
+saved F04b_umap_stability
+saved F05_choose_k
+saved F06_profiles
+saved F07_weight
+map: unmatched polygons: ['W. Sahara', 'Fr. S. Antarctic Lands', 'Lesotho', 'Ukraine', 'N. Cyprus', 'Somaliland']
+map: systems not drawn: 41 of which oil: 33
+saved F08_map
+F09 notches: {'Hydro-dominated': (90, 170), 'Diversified': (170, 280), 'Gas-dominated': (520, 604), 'Oil-dependent': (575, 625), 'Coal-heavy': (569, 647)} | past a quartile: []
+saved F09_ci_by_archetype
+F10a notches past a quartile: []
+F10b notches past a quartile: []
+saved F10_income
+saved F11_effects
+saved F12_surrogates
+saved F13_transitions
+saved F14_dumbbell
+saved F15_eu

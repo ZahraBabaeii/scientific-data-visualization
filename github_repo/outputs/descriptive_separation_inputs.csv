@@ -1,0 +1,10 @@
+variable,col,H,eta2_H,note
+Gas share,Gas,144.3561734949775,0.6813406480338714,descriptive separation only (clustering input)
+Hydro share,Hydro,140.62495951987515,0.6632279588343454,descriptive separation only (clustering input)
+Oil share,Oil,131.51982825108428,0.6190282924809917,descriptive separation only (clustering input)
+Coal share,Coal,101.9383246364978,0.4754287603713485,descriptive separation only (clustering input)
+Nuclear share,Nuclear,61.8758733674358,0.2809508415894942,descriptive separation only (clustering input)
+Wind share,Wind,61.08648504294499,0.27711885943177184,descriptive separation only (clustering input)
+Bioenergy share,Bioenergy,55.87079803553693,0.2517999904637715,descriptive separation only (clustering input)
+Solar share,Solar,32.047612654481796,0.1361534594877757,descriptive separation only (clustering input)
+Other renewables share,Other renewables,22.848140668096,0.09149582848590292,descriptive separation only (clustering input)

@@ -1,0 +1,18 @@
+{
+ "F01_coverage": "Coverage is complete only from 2000 to 2024, so that is the window we analyse",
+ "F02_world_trend": "Each kWh is 11% cleaner than in 2000, but the world makes twice as many of them",
+ "F03_pca": "Oil, gas and hydro span three-quarters of the variation between national electricity mixes",
+ "F04_embeddings": "The grouping is visible before any colour is added, so the archetypes are not painted on",
+ "F04b_umap_stability": "UMAP layouts change with seed and settings, but the same five groups stay together",
+ "F05_choose_k": "k = 5 ties k = 4 on separation and stays stable; from k = 6 both scores fall",
+ "F06_profiles": "Four archetypes lean on one source; the fifth spreads across nuclear, wind, solar and bioenergy",
+ "F07_weight": "61 oil-dependent systems make 0.4% of world electricity; 25 coal-heavy ones make half",
+ "F08_map": "Archetypes follow geography: South American and African hydro, Gulf gas, Asian coal",
+ "F09_ci_by_archetype": "Two tiers: hydro and diversified systems emit a quarter as much per kWh as fossil ones",
+ "F10_income": "Income buys more electricity, not cleaner electricity",
+ "F11_effects": "Archetypes differ in system size, continent and wealth, but not in import dependence",
+ "F12_surrogates": "Four yes/no questions reproduce the five archetypes with 95% balanced accuracy on unseen systems",
+ "F13_transitions": "Mixes are sticky: 149 of 208 power systems (72%) are in the same archetype as in 2000",
+ "F14_dumbbell": "14 of the 20 largest power systems got cleaner; Vietnam and Japan got markedly dirtier",
+ "F15_eu": "Italy cut the carbon intensity of its power by 44% without leaving the gas archetype"
+}

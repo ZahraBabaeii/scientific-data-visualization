@@ -1,0 +1,6 @@
+sample,n,excluded,used_for
+Clean panel 2000-2024,214,-,"trends (F02, F15)"
+2023 snapshot,211,"no usable 2023 data: Lesotho, Ukraine, Western Sahara","PCA, UMAP, clustering, external tests (F03-F09, F11, F12)"
+In both 2000 and 2023,208,"series start after 2000: East Timor, Montenegro, South Sudan","transitions (F13, F14)"
+With World Bank income group,202,"9 territories without a WB class: Cook Islands, Falkland Islands, French Guiana, Guadeloupe, Martinique, Montserrat, Reunion, Saint Helena, Saint Pierre and Miquelon","income tests (F10, F11)"
+With GDP per capita (2022),163,48 systems not in the Maddison database,"GDP correlations and test (F10, F11)"

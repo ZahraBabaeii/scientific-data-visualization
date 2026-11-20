@@ -1,0 +1,9 @@
+variable,col,role,test,stat,df,n,p,effect,effect_name,q_BH,m_tests
+Carbon intensity (gCO2e/kWh) †,carbon_intensity_elec,derived from the mix,Kruskal-Wallis,142.86308399014013,4,211,6.88023399442702e-30,0.6740926407288356,eta2_H,5.504187195541616e-29,8
+System size (TWh generated),electricity_generation,independent,Kruskal-Wallis,106.43405863902548,4,211,4.1905742604387715e-22,0.49725271183992953,eta2_H,1.6762297041755086e-21,8
+Population,population,independent,Kruskal-Wallis,62.715261142668965,4,211,7.789880395629554e-13,0.28502553952751924,eta2_H,2.0773014388345477e-12,8
+GDP per capita (2022),gdp_pc_latest,independent,Kruskal-Wallis,38.14306089094373,4,163,1.0469358092238996e-07,0.21609532209458057,eta2_H,2.0938716184477991e-07,8
+Electricity per person (kWh),per_capita_electricity,independent,Kruskal-Wallis,19.873570028518543,4,211,0.0005289307009207131,0.07705616518698322,eta2_H,0.0006044922296236722,8
+Net imports (% of demand),net_elec_imports_share_demand,independent,Kruskal-Wallis,1.350577797432275,4,211,0.8527377087353918,-0.012861272827998664,eta2_H,0.8527377087353918,8
+World Bank income group,income_group,independent,"Chi-square (Monte-Carlo, 20,000 perms)",51.23293137667295,12,202,4.999750012499375e-05,0.2907624306037756,Cramér's V,6.666333349999167e-05,8
+Continent,continent,independent,"Chi-square (Monte-Carlo, 20,000 perms)",116.93255844779335,20,211,4.999750012499375e-05,0.3722172555977007,Cramér's V,6.666333349999167e-05,8

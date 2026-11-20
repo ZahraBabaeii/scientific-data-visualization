@@ -1,0 +1,6 @@
+kmeans_archetype,0,1,2,3,4
+Coal-heavy,0,0,0,24,1
+Diversified,0,1,0,0,28
+Gas-dominated,0,0,45,0,1
+Hydro-dominated,0,46,1,2,1
+Oil-dependent,61,0,0,0,0

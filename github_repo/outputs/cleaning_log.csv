@@ -1,0 +1,10 @@
+step,action,reason,rows_before,rows_after
+Remove aggregate & historical entities,"dropped 93 entities without ISO code (regions, income groups, OECD/G20, USSR…); 'World' row kept separately for the global trend",aggregates mixed with country rows would double-count,23377,17291
+Column selection,kept 22 of 130 columns,other 100+ columns are primary-energy / per-fuel consumption metrics outside the question (and affected by OWID's primary-energy method change),17291,17291
+Time window 2000–2024,dropped years <2000 and 2025,coverage jumps from 81 to 212 countries in 2000 (Ember series start); 2025 has only 91 countries (partial year),17291,5484
+No electricity data,dropped country-years with missing generation,nothing to analyse,5484,5322
+Zero generation,dropped country-years with generation = 0 TWh (rounded),"shares undefined (0/0); affects 2 tiny systems, e.g. Niue, Lesotho 2023–24",5322,5296
+Structural zeros,NaN → 0 in 820 country-years where the observed shares already sum to 100 % (|residual| < 0.05 pp),"source stores 'no such plant' as missing; plain dropna() would delete China, India, Japan, Russia, Brazil…",5296,5296
+External join 1,left-join World Bank income group (2020 vintage) on ISO-3,enrichment for RQ3; 9 territories without a WB class keep NaN and are excluded only from income tests,5296,5296
+External join 2,left-join OWID continent + UN M49 sub-region on ISO-3,regional context for labels and the Europe focus,5296,5296
+Derived variables,"GDP per capita = gdp / population (latest available year ≤ 2022, Maddison 2011 int-$)","external explanatory variable; GDP is not published for 2023+, so it is carried forward and flagged",5296,5296
